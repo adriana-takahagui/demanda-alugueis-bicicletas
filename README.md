@@ -31,22 +31,62 @@ Qualquer empresa com fins lucrativos precisa traçar estratégias para aumentar 
 
 Um dos fatores que influencia a demanda de aluguéis de bicicleta é a condição climática. E o conjunto de dados analisado traz exatamente isso: quais eram as diversas condições climáticas (como temperatura, chuva, umidade, entre outros) em cada hora do dia e a quantidade de bicicletas alugadas nesse horário. 
 
-![Screenshot](dashboard01.png)
+Levando em consideração essa primeira análise, comecei a explorar os dados e suas diversas variáveis montando um primeiro relatório ("Análise de Demanda de Aluguéis de Bicicletas") e, assim, verificar o relacionamento entre as variáveis e a quantidade de aluguéis. Posteriormente, elaborei um "Simulador Financeiro" para auxiliar na análise de diversos cenários e na avaliação de possíveis respostas para determinados eventos. 
 
-Na Página Inicial (imagem acima), podemos ver uma breve descrição do problema, o período de dados e a fonte de dados utilizada. 
+![Screenshot](dashboard01.png)
+Figura 1
+
+Na **Página Inicial** (Figura 1), podemos ver uma breve descrição do problema, o período de dados e a fonte de dados utilizada. 
 
 ![Screenshot](dashboard02.png)
+Figura 2
 
-Na "Análise de Demanda de Aluguéis de Bicicletas", podemos analisar as diversas variáveis do conjunto de dados e como elas se relacionam com o volume de bicicletas alugadas e influenciam o aumento ou não de aluguéis. <br>
-1. No visual "Qtde Aluguéis por estação, ano e mês", podemos constar que o maior volume de aluguéis ocorreu nos períodos mais quentes. <br>
-2. E em "Qtde Aluguéis por período do dia e horário", o maior volume ocorreu no começo do dia e no final da tarde e à noite. <br>
-3. Não vemos uma grande diferença em relação ao volume de aluguéis nos dias da semana em "Qtde Aulguéis por dia da semana". <br>
-4. E a maioria da quantidade de aluguéis ocorreram em dias que não eram feriados, mas isso não impede que alguma ação também seja realizada nos feriados. 
-5. A tabela mostra como as diversas variáveis como as condições climáticas influenciam na demanda de aluguéis de bicicletas e como suas combinações podem trazer insights para elaborar estratégias que leve ao aumento da demanda do serviço.
+Na **"Análise de Demanda de Aluguéis de Bicicletas"** (Figura 2), podemos analisar as diversas variáveis do conjunto de dados, como elas se relacionam com o volume de bicicletas alugadas e como influenciam o aumento ou não de aluguéis. 
+1. No visual **"Qtde Aluguéis por estação, ano e mês"**, podemos constar que o maior volume de aluguéis ocorreu nos períodos mais quentes. Notamos também como os volumes são diferentes em cada estação, sendo portanto um grande indicativo de ser uma variável relevante para o volume de aluguéis. 
+2. Em **"Qtde Aluguéis por período do dia e horário"**, o maior volume ocorreu no começo do dia e no final da tarde e à noite, sendo o horário outra variável importante para o aumento de aluguéis. 
+3. Não vemos uma grande diferença em relação ao volume de aluguéis nos dias da semana em **"Qtde Aluguéis por dia da semana"**. 
+4. E a maioria da quantidade de aluguéis ocorreram em dias que não eram **feriados**, mas isso não impede que alguma ação também seja realizada nos feriados. 
 
 ![Screenshot](dashboard03.png)
+Figura 3
 
-6. 
+5. E no tooltip (dica de ferramenta) dos visuais "Qtde Aluguéis por estação, ano e mês" e "Qtde Aluguéis por período do dia e horário" (Figura 3) podemos acompanhar as médias de temperatura, umidade, chuva, etc.
+
+![Screenshot](dashboard04.png)
+Figura 4
+
+6. Partindo para analisar as condições climáticas (Figura 4), resolvi criar faixas de valores para facilitar a análise da influência de cada situação no volume de aluguéis. A tabela mostra, portanto, como as diversas variáveis como as condições climáticas influenciam na demanda de aluguéis de bicicletas e como suas combinações podem trazer insights para elaborar estratégias que leve ao aumento da demanda do serviço.
+
+![Screenshot](dashboard05.png)
+Figura 5
+
+7. E no tooltip da tabela (Figura 5), trago as informações referentes às faixas de valores apresentadas, assim como legenda das cores utilizadas. <br>
+Todo o tratamento para definir as faixas de valores foi realizada no Power Query Editor. 
+
+![Screenshot](dashboard06.png)
+Figura 6
+
+8. Podemos então combinar as variáveis de diversas maneiras e ordem para analisarmos quais os fatores que mais influenciam a quantidade de aluguéis de bicicletas, como por exemplo na imagem vemos temperatura média, umidade alta, chuva fraca e radiação baixa. 
+
+![Screenshot](dashboard07.png)
+Figura 7
+
+No **Simulador Financeiro**, a ideia é possibilitar a análise "What If" (E se) simulando diversos cenários financeiros para extrair insights baseado em dados históricos. 
+
+Para iniciar, adicione o valor cobrado por aluguel, o valor de manutenção por aluguel e o valor das outras despesas mensais. 
+A partir daí, as possibilidades das simulações baseiam-se na alteração percentual da(o):
+* Quantidade de aluguéis 
+* Valor cobrado por aluguel 
+* Manutenção por aluguel
+* Outras despesas mensais 
+
+E o resultado pode ser conferido na tabela logo abaixo, onde visualizamos as variações positivas ou negativas da simulação. 
+
+![Screenshot](dashboard08.png)
+Figura 8
+
+**Exemplo de Simulação**: vamos supor que queiramos dar um desconto de 5% no valor cobrado no aluguel. Para suprir esse desconto, podemos vender mais, cortar despesas ou aumentar o custo de manutenção. 
+Escolhendo vender mais, precisamos aumentar a quantidade de aluguéis em, no mínimo, 20% para começar a ter algum lucro. 
 
 ## **Conclusão e Insights**
 
