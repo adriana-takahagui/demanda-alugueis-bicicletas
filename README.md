@@ -8,28 +8,30 @@ Qualquer empresa com fins lucrativos precisa traçar estratégias para aumentar 
 
 **Objetivo do Dashboard**: Ajudar na compreensão do negócio extraindo informações relevantes e a despertar ideias e insights que contribuam na elaboração de estratégias para aumentar as vendas do serviço de aluguel de bicicletas desta empresa. 
 
-**Dataset**: Dados foram extraídos do Kaggle: https://www.kaggle.com/code/hardikjain10/seoul-bike-rented/data﻿
+**Dataset**: Dados foram extraídos do Kaggle: https://www.kaggle.com/code/hardikjain10/seoul-bike-rented/data
 
 **Dicionário de Dados**: Abaixo segue uma descrição das variáveis utilizadas para a construção do dashboard.
 
-➔ Date (data): data <br>
+➔ Date (data): Data <br>
 ➔ Rented Bike Count (aluguel): Contagem de bicicletas alugadas <br>
-➔ Hour (hora): horário do dia <br>
-➔ Temperature(°C) (temperatura): temperatura em ºC <br>
-➔ Humidity(%) (umidade): Umidade(%) <br>
-➔ Wind speed (m/s) (vento): Velocidade do vento (m/s) <br>
-➔ Visibility (10m) (visibilidade): Visibilidade (10m) <br>
-➔ Dew point temperature(°C) (temp_orvalho): Temperatura do ponto de orvalho (°C) <br>
-➔ Solar Radiation (MJ/m2) (radiacao_solar): Radiação Solar (MJ/m2) <br>
-➔ Rainfall (mm) (precipitacao_pluviometrica): Precipitação Pluviométrica(mm) <br>
-➔ Snowfall (cm) (neve): Queda de neve (cm) <br>
-➔ Seasons (estacao): estação do ano <br>
-➔ Holiday (feriado): se o dia era um feriado <br>
-➔ Functioning Day (dia_util): se o dia era útil ou não <br>
+➔ Hour (hora): Horário do dia <br>
+➔ Temperature(°C) (temperatura): Temperatura em ºC <br>
+➔ Humidity(%) (umidade): Umidade em % <br>
+➔ Wind speed (m/s) (vento): Velocidade do vento em m/s <br>
+➔ Visibility (10m) (visibilidade): Visibilidade a cada 10m <br>
+➔ Dew point temperature(°C) (temp_orvalho): Temperatura do ponto de orvalho em °C <br>
+➔ Solar Radiation (MJ/m2) (radiacao_solar): Radiação Solar em MJ/m² <br>
+➔ Rainfall (mm) (precipitacao_pluviometrica): Precipitação Pluviométrica em mm <br>
+➔ Snowfall (cm) (neve): Queda de neve em cm <br>
+➔ Seasons (estacao): Estação do ano <br>
+➔ Holiday (feriado): Se o dia era um feriado <br>
+➔ Functioning Day (dia_util): Se o dia era útil ou não <br>
+
+**Para acessar e navegar pelo dashboard no Power BI**, clique [aqui](https://app.powerbi.com/view?r=eyJrIjoiZjVhNmJkZGUtZmJiNy00MTFlLWE0MDQtZDY5YjI1M2NlZDQxIiwidCI6IjgxMTFjMzgxLThjM2EtNDNkMS05ODc4LTA5ZjAzZGQ0N2Y1NiJ9) 
 
 ## **Desenvolvimento**
 
-Um dos fatores que influencia a demanda de aluguéis de bicicleta é a condição climática. E o conjunto de dados analisado traz exatamente isso: quais eram as diversas condições climáticas (como temperatura, chuva, umidade, entre outros) em cada hora do dia e a quantidade de bicicletas alugadas nesse horário. 
+Um dos fatores que influencia a demanda de aluguéis de bicicleta é a condição climática. E o conjunto de dados analisado traz exatamente isso: quais eram as diversas condições climáticas (como temperatura, chuva, umidade, entre outros) em cada hora do dia e a quantidade de bicicletas alugadas em cada horário. 
 
 Levando em consideração essa primeira análise, comecei a explorar os dados e suas diversas variáveis montando um primeiro relatório ("Análise de Demanda de Aluguéis de Bicicletas") e, assim, verificar o relacionamento entre as variáveis e a quantidade de aluguéis. Posteriormente, elaborei um "Simulador Financeiro" para auxiliar na análise de diversos cenários e na avaliação de possíveis respostas para determinados eventos. 
 
@@ -50,12 +52,12 @@ Na **"Análise de Demanda de Aluguéis de Bicicletas"** (Figura 2), podemos anal
 ![Screenshot](dashboard03.png)
 Figura 3
 
-5. E no tooltip (dica de ferramenta) dos visuais "Qtde Aluguéis por estação, ano e mês" e "Qtde Aluguéis por período do dia e horário" (Figura 3) podemos acompanhar as médias de temperatura, umidade, chuva, etc.
+5. E no **tooltip** (dica de ferramenta) dos visuais **"Qtde Aluguéis por estação, ano e mês"** e **"Qtde Aluguéis por período do dia e horário"** (Figura 3) podemos acompanhar as médias de temperatura, umidade, chuva, etc.
 
 ![Screenshot](dashboard04.png)
 Figura 4
 
-6. Partindo para analisar as condições climáticas (Figura 4), resolvi criar faixas de valores para facilitar a análise da influência de cada situação no volume de aluguéis. A tabela mostra, portanto, como as diversas variáveis como as condições climáticas influenciam na demanda de aluguéis de bicicletas e como suas combinações podem trazer insights para elaborar estratégias que leve ao aumento da demanda do serviço.
+6. Partindo para analisar as condições climáticas (Figura 4), resolvi criar faixas de valores para facilitar a análise da influência de cada situação no volume de aluguéis. A tabela mostra, portanto, como as diversas variáveis como as condições climáticas influenciam na demanda de aluguéis de bicicletas e como suas combinações podem trazer insights para elaborar estratégias que levem ao aumento da demanda do serviço.
 
 ![Screenshot](dashboard05.png)
 Figura 5
@@ -66,12 +68,12 @@ Todo o tratamento para definir as faixas de valores foi realizada no Power Query
 ![Screenshot](dashboard06.png)
 Figura 6
 
-8. Podemos então combinar as variáveis de diversas maneiras e ordem para analisarmos quais os fatores que mais influenciam a quantidade de aluguéis de bicicletas, como por exemplo na imagem vemos temperatura média, umidade alta, chuva fraca e radiação baixa. 
+8. Podemos então combinar as variáveis de diversas maneiras e ordem para analisarmos quais os fatores que mais influenciam a quantidade de aluguéis de bicicletas, como, por exemplo, na imagem da Figura 6 vemos que as condições mais favoráveis são: temperatura média, umidade alta, chuva fraca e radiação baixa. 
 
 ![Screenshot](dashboard07.png)
 Figura 7
 
-No **Simulador Financeiro**, a ideia é possibilitar a análise "What If" (E se) simulando diversos cenários financeiros para extrair insights baseado em dados históricos. 
+No **Simulador Financeiro** (Figura 7), a ideia é possibilitar a análise "What If" (E se) simulando diversos cenários financeiros para extrair insights baseado em dados históricos. 
 
 Para iniciar, adicione o valor cobrado por aluguel, o valor de manutenção por aluguel e o valor das outras despesas mensais. 
 A partir daí, as possibilidades das simulações baseiam-se na alteração percentual da(o):
@@ -85,16 +87,22 @@ E o resultado pode ser conferido na tabela logo abaixo, onde visualizamos as var
 ![Screenshot](dashboard08.png)
 Figura 8
 
-**Exemplo de Simulação**: vamos supor que queiramos dar um desconto de 5% no valor cobrado no aluguel. Para suprir esse desconto, podemos vender mais, cortar despesas ou aumentar o custo de manutenção. 
+**Exemplo de Simulação** (Figura 8): vamos supor que queiramos dar um desconto de 5% no valor cobrado no aluguel. Para suprir esse desconto, podemos vender mais, cortar despesas ou aumentar o custo de manutenção. 
 Escolhendo vender mais, precisamos aumentar a quantidade de aluguéis em, no mínimo, 20% para começar a ter algum lucro. 
 
 ## **Conclusão e Insights**
 
+Portanto, através do dashboard apresentado, conseguimos compreender quais condições são mais favoráveis para aumentar a demanda de aluguéis de bicicletas. E, de acordo com a análise realizada e os dados apresentados, seria no final da tarde e à noite, temperatura média e alta, umidade alta, chuva fraca, radiação baixa, e nas estações mais quentes como verão, primavera e outono. 
+ 
+Além disso, é possível simular financeiramente diversos cenários. Por exemplo, para verificar se, diante de determinado desconto, quais ações podem ser tomadas para ter lucro com esse desconto, seja vender mais em quantidade de aluguéis ou cortar as despesas. Ou se tiver um aumento no custo da manutenção, quais são os possíveis cenários para mitigar esse aumento para o cliente? 
 
+E diante de tais informações, é possível criar campanhas estratégicas, promoções, promoções relâmpagos. <br>
+Criar diversos tipos de planos como: planos mensais ou plano família. <br>
+Talvez promover eventos de saúde apresentando o benefício de andar de bicicleta, mesmo não tendo uma, mas alugando. 
+
+Eu também recomendaria uma pesquisa de satisfação para colher dados a respeito dos aspectos positivos e negativos do serviço prestado.  
+E assim elaborar diversas estratégias junto as áreas de negócio da empresa para montar planos de ações visando o objetivo de aumentar a quantidade de aluguéis de bicicletas. 
 
 ## **Próximos Passos**
 
-
-
-**Para acessar e navegar pelo dashboard no Power BI**, clique [aqui].( link )
-
+Os próximos passos seriam criar um modelo de Machine Learning que ajude a prever a quantidade de aluguéis ao longo de um ano. Desta forma, preparar-se melhor para enfrentar os desafios do negócio. 
